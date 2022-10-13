@@ -57,3 +57,16 @@ function newNonPlayableCharacter(x, y) {
         stop: stop
     }
 }
+function sleep(time){
+    return new Promise(resolve => {
+        setTimeout(resolve, time)
+    })  
+}
+
+async function moveNPC(){
+    await npc.walkEast(2000)
+    npc.walkSouth()
+}
+moveNPC()
+
+
